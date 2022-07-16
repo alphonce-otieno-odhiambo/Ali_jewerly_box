@@ -1,6 +1,10 @@
 from django.shortcuts import render
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .models import *
+from .serializers import * 
 
 # Create your views here.
 
-def home(url):
-    return render(url, 'home.html')
+def home(request):
+    return render(request, 'home.html')
